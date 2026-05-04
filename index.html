@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Md Minhaz Uddin — Marketing strategist, debate leader, and aspiring entrepreneur. BBA Marketing student at Albukhary International University, Malaysia.">
+    <meta name="keywords" content="Minhaz Uddin, marketing, BBA, entrepreneur, data analysis, AI marketing, business development">
+    <meta name="author" content="Md Minhaz Uddin">
+    <title>Md Minhaz Uddin — Marketing Strategist & Aspiring Entrepreneur</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">M<span class="accent">.</span></a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#ventures">Ventures</a></li>
+                <li><a href="#contact" class="nav-cta">Get In Touch</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <div class="hero-left">
+                <div class="hero-badge reveal">
+                    <span class="badge-dot"></span>
+                    Open to Opportunities
+                </div>
+                <h1 class="hero-title reveal">
+                    <span class="hero-greeting">Hello, I'm</span>
+                    <span class="hero-name">Md Minhaz<br>Uddin</span>
+                </h1>
+                <p class="hero-subtitle reveal">
+                    <span class="typed-text" id="typed-text"></span><span class="cursor">|</span>
+                </p>
+                <p class="hero-description reveal">
+                    Marketing strategist, award-winning team leader, and aspiring entrepreneur 
+                    building at the intersection of business analytics, AI, and social impact.
+                </p>
+                <div class="hero-actions reveal">
+                    <a href="#contact" class="btn btn-primary">
+                        <span>Let's Connect</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="#achievements" class="btn btn-ghost">
+                        <span>View My Work</span>
+                    </a>
+                </div>
+                <div class="hero-stats reveal">
+                    <div class="stat">
+                        <span class="stat-number" data-count="4">0</span>
+                        <span class="stat-label">Languages</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="7" data-decimal="false">0</span>
+                        <span class="stat-label">IELTS Band</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-icon">🥇</span>
+                        <span class="stat-label">Gold Medalist</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-right reveal">
+                <div class="hero-photo-wrapper">
+                    <div class="hero-photo-glow"></div>
+                    <div class="hero-photo-ring"></div>
+                    <img src="photo.jpg" alt="Md Minhaz Uddin" class="hero-photo" />
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">01 — About Me</span>
+                <h2 class="section-title">Strategy. Leadership.<br><span class="accent">Impact.</span></h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <p class="about-lead">
+                        I'm an international student from <strong>Bangladesh</strong>, currently pursuing a 
+                        <strong>BBA in Marketing</strong> at Albukhary International University in Malaysia 
+                        on a <strong>fully-funded scholarship</strong>.
+                    </p>
+                    <p>
+                        My strength lies in strategic management, problem-solving, and understanding people. 
+                        I founded and lead my university's debate club, organizing workshops and competitive 
+                        events that sharpen critical thinking and public speaking.
+                    </p>
+                    <p>
+                        Before university, I served as an <strong>ICT Instructor</strong> at Ucchas ICT Academy 
+                        and taught <strong>Intermediate Physics</strong> at Biggyan Coaching Center — experiences 
+                        that deepened my ability to break down complexity and communicate with clarity.
+                    </p>
+                    <p>
+                        When I'm not strategizing, you'll find me cycling, exploring nature photography, 
+                        or diving into the latest AI tools reshaping the marketing landscape.
+                    </p>
+                </div>
+                <div class="about-cards reveal">
+                    <div class="info-card">
+                        <div class="info-card-icon">🎓</div>
+                        <div class="info-card-content">
+                            <h4>Education</h4>
+                            <p>BBA Marketing — Albukhary International University (CGPA: 3.91)</p>
+                            <span class="info-card-tag">Full Scholarship · Dean's List</span>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-icon">🌍</div>
+                        <div class="info-card-content">
+                            <h4>Languages</h4>
+                            <p>English (C1 · IELTS 7.5), Bangla, Hindi, Urdu</p>
+                            <span class="info-card-tag">Quadrilingual</span>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-icon">🏊</div>
+                        <div class="info-card-content">
+                            <h4>Athletics</h4>
+                            <p>State-level champion swimmer & active cyclist</p>
+                            <span class="info-card-tag">Island Roots</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">02 — Achievements</span>
+                <h2 class="section-title">Milestones That<br><span class="accent">Define Me.</span></h2>
+            </div>
+            <div class="achievements-timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker">
+                        <div class="timeline-icon">🥇</div>
+                    </div>
+                    <div class="timeline-card">
+                        <span class="timeline-year">2024</span>
+                        <h3>Gold Medal — MABC 2024</h3>
+                        <p>Led a four-person team to win the Gold Medal at the Malaysian Business Analytics Competition, demonstrating advanced data-driven strategic thinking.</p>
+                        <div class="timeline-tags">
+                            <span>Business Analytics</span>
+                            <span>Team Leadership</span>
+                            <span>National Competition</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker">
+                        <div class="timeline-icon">🎤</div>
+                    </div>
+                    <div class="timeline-card">
+                        <span class="timeline-year">2023 — Present</span>
+                        <h3>Founder & President — Debate Club</h3>
+                        <p>Founded and currently lead the university's debate club, organizing inter-university debates, public speaking workshops, and argumentation training sessions.</p>
+                        <div class="timeline-tags">
+                            <span>Leadership</span>
+                            <span>Public Speaking</span>
+                            <span>Event Management</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker">
+                        <div class="timeline-icon">💡</div>
+                    </div>
+                    <div class="timeline-card">
+                        <span class="timeline-year">In Progress</span>
+                        <h3>DOT ZERO — Dual-Purpose Paper Innovation</h3>
+                        <p>Developing a startup concept under the DOT ZERO brand — an innovative dual-purpose paper product that functions as both a receipt and a tissue, targeting sustainability and convenience.</p>
+                        <div class="timeline-tags">
+                            <span>Innovation</span>
+                            <span>Sustainability</span>
+                            <span>Startup</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker">
+                        <div class="timeline-icon">💰</div>
+                    </div>
+                    <div class="timeline-card">
+                        <span class="timeline-year">2024</span>
+                        <h3>Secured Project Funding</h3>
+                        <p>Successfully pitched and secured funding for team projects, demonstrating strong business acumen, persuasion skills, and financial planning capabilities.</p>
+                        <div class="timeline-tags">
+                            <span>Fundraising</span>
+                            <span>Pitching</span>
+                            <span>Business Acumen</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker">
+                        <div class="timeline-icon">🎖️</div>
+                    </div>
+                    <div class="timeline-card">
+                        <span class="timeline-year">Bangladesh Armed Forces</span>
+                        <h3>Inter-Services Selection Board (ISSB) — Passed</h3>
+                        <p>Passed a rigorous seven-phase military officer selection process over four days (tested twice), demonstrating exceptional resilience, leadership, and psychological aptitude under extreme pressure.</p>
+                        <div class="timeline-tags">
+                            <span>Military</span>
+                            <span>Leadership</span>
+                            <span>Resilience</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker">
+                        <div class="timeline-icon">📚</div>
+                    </div>
+                    <div class="timeline-card">
+                        <span class="timeline-year">2022 — 2024</span>
+                        <h3>Educator — Science, ICT & Physics</h3>
+                        <p>Science Teacher at Bhola Memorial Cadet School & College, ICT Instructor at Ucchas ICT Academy, and Physics Instructor at Biggyan Coaching Center. Taught students ages 5–18, developed lesson plans, and was recognized for strong work ethic.</p>
+                        <div class="timeline-tags">
+                            <span>Teaching</span>
+                            <span>ICT</span>
+                            <span>Physics</span>
+                            <span>Science</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker">
+                        <div class="timeline-icon">🏅</div>
+                    </div>
+                    <div class="timeline-card">
+                        <span class="timeline-year">Multiple Awards</span>
+                        <h3>Scholarship Offers & Academic Honors</h3>
+                        <p>Dean's List (CGPA 3.91/4.00). Received full-funded scholarship offers from Universitas Islam Indonesia (Future Global Leader) and Kazakh-British Technical University (Kazakhstan Government Scholarship), in addition to the accepted Albukhary Foundation Scholarship. HSC & SSC both scored 5.00/5.00.</p>
+                        <div class="timeline-tags">
+                            <span>Dean's List</span>
+                            <span>Scholarships</span>
+                            <span>Academic Excellence</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">03 — Expertise</span>
+                <h2 class="section-title">What I Bring<br><span class="accent">To The Table.</span></h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card reveal" data-tilt>
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-icon">📊</div>
+                    <h3>Data Analysis</h3>
+                    <p>Transforming raw data into strategic business insights. Currently deepening expertise with 42 hours/week dedicated practice.</p>
+                </div>
+                <div class="skill-card reveal" data-tilt>
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-icon">🧠</div>
+                    <h3>Strategic Management</h3>
+                    <p>Big-picture thinking meets tactical execution. Proven ability to lead teams toward gold-medal outcomes.</p>
+                </div>
+                <div class="skill-card reveal" data-tilt>
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-icon">🤖</div>
+                    <h3>AI & Marketing Tech</h3>
+                    <p>Leveraging cutting-edge AI tools for marketing automation, content creation, and audience analysis.</p>
+                </div>
+                <div class="skill-card reveal" data-tilt>
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-icon">🎯</div>
+                    <h3>Sales & Persuasion</h3>
+                    <p>Strong communication and people skills honed through debate leadership and multilingual fluency across 4 languages.</p>
+                </div>
+                <div class="skill-card reveal" data-tilt>
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-icon">📈</div>
+                    <h3>Business Development</h3>
+                    <p>Identifying opportunities, securing funding, and building ventures from concept to execution.</p>
+                </div>
+                <div class="skill-card reveal" data-tilt>
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-icon">🎬</div>
+                    <h3>Content & Video</h3>
+                    <p>Video editing, AI-driven production, and content strategy for digital-first brands and audiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ventures Section -->
+    <section id="ventures">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">04 — Ventures</span>
+                <h2 class="section-title">Projects I'm<br><span class="accent">Building.</span></h2>
+            </div>
+            <div class="ventures-grid">
+                <div class="venture-card reveal">
+                    <div class="venture-card-bg"></div>
+                    <div class="venture-card-content">
+                        <div class="venture-status">
+                            <span class="status-dot active"></span>
+                            Active
+                        </div>
+                        <h3>BAJOWS News</h3>
+                        <p class="venture-subtitle">Bangladesh Journalism Wing for Students</p>
+                        <p>A political news and systems reform channel analyzing geopolitics and local policies. Delivered in both Bangla and English, targeting informed Bangladeshi audiences worldwide.</p>
+                        <div class="venture-tags">
+                            <span>Journalism</span>
+                            <span>Geopolitics</span>
+                            <span>Bilingual</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="venture-card reveal">
+                    <div class="venture-card-bg"></div>
+                    <div class="venture-card-content">
+                        <div class="venture-status">
+                            <span class="status-dot building"></span>
+                            Building
+                        </div>
+                        <h3>DOT ZERO</h3>
+                        <p class="venture-subtitle">Social Business Club & Innovation Lab</p>
+                        <p>A university social business club and startup concept developing sustainable innovations — including a dual-purpose paper product that serves as both a receipt and a tissue.</p>
+                        <div class="venture-tags">
+                            <span>Social Enterprise</span>
+                            <span>Sustainability</span>
+                            <span>Innovation</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="venture-card reveal">
+                    <div class="venture-card-bg"></div>
+                    <div class="venture-card-content">
+                        <div class="venture-status">
+                            <span class="status-dot paused"></span>
+                            On Hold
+                        </div>
+                        <h3>DOT ZERO AI</h3>
+                        <p class="venture-subtitle">AI Tools & Student Productivity</p>
+                        <p>An English-language content brand helping global and Malaysian students leverage AI tools, productivity systems, and scholarship strategies to accelerate their careers.</p>
+                        <div class="venture-tags">
+                            <span>AI Tools</span>
+                            <span>Productivity</span>
+                            <span>Education</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="contact-wrapper reveal">
+                <div class="section-header">
+                    <span class="section-tag">05 — Contact</span>
+                    <h2 class="section-title">Let's Build<br><span class="accent">Something Together.</span></h2>
+                </div>
+                <p class="contact-description">
+                    I'm currently open to freelance projects, collaboration opportunities, 
+                    sales roles, and exchange programs. Whether you have a project in mind or just want to connect — my inbox is open.
+                </p>
+                <div class="contact-actions-top">
+                    <a href="resume.html" target="_blank" class="btn btn-primary" id="download-resume">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                        <span>View My Resume</span>
+                    </a>
+                </div>
+                <div class="contact-links">
+                    <a href="mailto:write.minhaz@gmail.com" class="contact-card" id="contact-email">
+                        <div class="contact-card-icon">✉️</div>
+                        <div>
+                            <h4>Email</h4>
+                            <span>write.minhaz@gmail.com</span>
+                        </div>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+                    </a>
+                    <a href="https://linkedin.com/in/whoisminhaz" class="contact-card" id="contact-linkedin" target="_blank" rel="noopener">
+                        <div class="contact-card-icon">💼</div>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <span>linkedin.com/in/whoisminhaz</span>
+                        </div>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+                    </a>
+                    <a href="https://facebook.com/whoisminhaz" class="contact-card" id="contact-facebook" target="_blank" rel="noopener">
+                        <div class="contact-card-icon">📘</div>
+                        <div>
+                            <h4>Facebook</h4>
+                            <span>facebook.com/whoisminhaz</span>
+                        </div>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+                    </a>
+                    <a href="https://instagram.com/who.isminhaz" class="contact-card" id="contact-instagram" target="_blank" rel="noopener">
+                        <div class="contact-card-icon">📸</div>
+                        <div>
+                            <h4>Instagram</h4>
+                            <span>@who.isminhaz</span>
+                        </div>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+                    </a>
+                    <a href="tel:+601124248680" class="contact-card" id="contact-phone">
+                        <div class="contact-card-icon">📱</div>
+                        <div>
+                            <h4>Phone</h4>
+                            <span>+60 11-2424-8680</span>
+                        </div>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+                    </a>
+                    <a href="https://sites.google.com/view/whoisminhaz/home" class="contact-card" id="contact-website" target="_blank" rel="noopener">
+                        <div class="contact-card-icon">🌐</div>
+                        <div>
+                            <h4>Google Site</h4>
+                            <span>View Old Profile</span>
+                        </div>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+                    </a>
+                </div>
+                <div class="contact-footer">
+                    <p>Based in <strong>Kedah, Malaysia</strong> · Originally from <strong>Bhola, Bangladesh</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <span class="footer-logo">M<span class="accent">.</span></span>
+                <p>&copy; 2025 Md Minhaz Uddin. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
