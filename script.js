@@ -1,171 +1,58 @@
-/* ============================================
-   MD MINHAZ UDDIN — PORTFOLIO JS
-   Animations, Typing Effect, Particle BG
-   ============================================ */
+﻿document.addEventListener('DOMContentLoaded',()=>{
+// NAV
+const nav=document.getElementById('navbar');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60));
+const tog=document.getElementById('nav-toggle'),links=document.getElementById('nav-links');
+tog.addEventListener('click',()=>links.classList.toggle('active'));
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('active')));
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth'})})});
 
-document.addEventListener('DOMContentLoaded', () => {
+// PARTICLES
+const c=document.getElementById('particles'),ctx=c.getContext('2d');
+let W,H;function resize(){W=c.width=innerWidth;H=c.height=innerHeight}resize();
+window.addEventListener('resize',resize);
+const dots=Array.from({length:60},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,vx:(Math.random()-0.5)*0.4,vy:(Math.random()-0.5)*0.4,r:Math.random()*2+0.5}));
+function drawParticles(){ctx.clearRect(0,0,W,H);dots.forEach(d=>{d.x+=d.vx;d.y+=d.vy;if(d.x<0||d.x>W)d.vx*=-1;if(d.y<0||d.y>H)d.vy*=-1;ctx.beginPath();ctx.arc(d.x,d.y,d.r,0,Math.PI*2);ctx.fillStyle='rgba(108,92,231,0.25)';ctx.fill()});
+for(let i=0;i<dots.length;i++)for(let j=i+1;j<dots.length;j++){const dx=dots[i].x-dots[j].x,dy=dots[i].y-dots[j].y,dist=Math.sqrt(dx*dx+dy*dy);if(dist<120){ctx.beginPath();ctx.moveTo(dots[i].x,dots[i].y);ctx.lineTo(dots[j].x,dots[j].y);ctx.strokeStyle=`rgba(0,206,201,${0.08*(1-dist/120)})`;ctx.stroke()}}
+requestAnimationFrame(drawParticles)}drawParticles();
 
-    // --- Particle Background ---
-    const canvas = document.getElementById('bg-canvas');
-    const ctx = canvas.getContext('2d');
-    let particles = [];
-    let mouse = { x: null, y: null };
+// TYPING
+const words=['measurable growth.','real impact.','winning results.','scalable ventures.','strategic value.'];
+const el=document.getElementById('typed');let wi=0,ci=0,del=false;
+function type(){if(!del){if(ci<words[wi].length){el.textContent+=words[wi][ci];ci++;setTimeout(type,80)}else{setTimeout(()=>{del=true;type()},2000)}}
+else{if(ci>0){el.textContent=words[wi].substring(0,ci-1);ci--;setTimeout(type,40)}else{del=false;wi=(wi+1)%words.length;setTimeout(type,400)}}}type();
 
-    function resizeCanvas() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-    }
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
-    window.addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.clientY; });
+// COUNTERS
+const counters=document.querySelectorAll('.stat-num');
+const cObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){const el=e.target,target=parseFloat(el.dataset.count),dec=el.dataset.decimal==='true';let cur=0;const step=target/40;const iv=setInterval(()=>{cur+=step;if(cur>=target){cur=target;clearInterval(iv)}el.textContent=dec?cur.toFixed(1):Math.round(cur)},30);cObs.unobserve(el)}})},{threshold:0.5});
+counters.forEach(c=>cObs.observe(c));
 
-    class Particle {
-        constructor() { this.reset(); }
-        reset() {
-            this.x = Math.random() * canvas.width;
-            this.y = Math.random() * canvas.height;
-            this.size = Math.random() * 2 + 0.5;
-            this.speedX = (Math.random() - 0.5) * 0.4;
-            this.speedY = (Math.random() - 0.5) * 0.4;
-            this.opacity = Math.random() * 0.5 + 0.1;
-        }
-        update() {
-            this.x += this.speedX;
-            this.y += this.speedY;
-            if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
-            if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
-        }
-        draw() {
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(108, 92, 231, ${this.opacity})`;
-            ctx.fill();
-        }
-    }
+// REVEAL
+const reveals=document.querySelectorAll('.reveal');
+const rObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('active');rObs.unobserve(e.target)}})},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+reveals.forEach(el=>rObs.observe(el));
 
-    const particleCount = Math.min(80, Math.floor((canvas.width * canvas.height) / 15000));
-    for (let i = 0; i < particleCount; i++) particles.push(new Particle());
+// TILT
+document.querySelectorAll('[data-tilt]').forEach(card=>{card.addEventListener('mousemove',e=>{const r=card.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-0.5,y=(e.clientY-r.top)/r.height-0.5;card.style.transform=`perspective(600px) rotateY(${x*8}deg) rotateX(${-y*8}deg) translateY(-4px)`});
+card.addEventListener('mouseleave',()=>{card.style.transform='perspective(600px) rotateY(0) rotateX(0) translateY(0)'})});
+});
 
-    function connectParticles() {
-        for (let a = 0; a < particles.length; a++) {
-            for (let b = a + 1; b < particles.length; b++) {
-                const dx = particles[a].x - particles[b].x;
-                const dy = particles[a].y - particles[b].y;
-                const dist = Math.sqrt(dx * dx + dy * dy);
-                if (dist < 120) {
-                    ctx.beginPath();
-                    ctx.strokeStyle = `rgba(108, 92, 231, ${0.08 * (1 - dist / 120)})`;
-                    ctx.lineWidth = 0.5;
-                    ctx.moveTo(particles[a].x, particles[a].y);
-                    ctx.lineTo(particles[b].x, particles[b].y);
-                    ctx.stroke();
-                }
-            }
-        }
-    }
-
-    function animateParticles() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        particles.forEach(p => { p.update(); p.draw(); });
-        connectParticles();
-        requestAnimationFrame(animateParticles);
-    }
-    animateParticles();
-
-    // --- Typing Effect ---
-    const typedEl = document.getElementById('typed-text');
-    const phrases = [
-        'Marketing Strategist',
-        'Data Analytics Enthusiast',
-        'Aspiring Entrepreneur',
-        'AI Marketing Specialist',
-        'Debate Club President',
-        'Gold Medal Winner — MABC 2024'
-    ];
-    let phraseIndex = 0, charIndex = 0, isDeleting = false;
-
-    function typeEffect() {
-        const current = phrases[phraseIndex];
-        if (isDeleting) {
-            typedEl.textContent = current.substring(0, charIndex--);
-            if (charIndex < 0) { isDeleting = false; phraseIndex = (phraseIndex + 1) % phrases.length; }
-        } else {
-            typedEl.textContent = current.substring(0, charIndex++);
-            if (charIndex > current.length) { isDeleting = true; setTimeout(typeEffect, 1800); return; }
-        }
-        setTimeout(typeEffect, isDeleting ? 40 : 80);
-    }
-    typeEffect();
-
-    // --- Navbar Scroll ---
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-        navbar.classList.toggle('scrolled', window.scrollY > 50);
-    });
-
-    // --- Mobile Nav Toggle ---
-    const navToggle = document.getElementById('nav-toggle');
-    const navLinks = document.getElementById('nav-links');
-    navToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
-    navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => navLinks.classList.remove('active'));
-    });
-
-    // --- Scroll Reveal ---
-    const revealElements = document.querySelectorAll('.reveal');
-    const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry, i) => {
-            if (entry.isIntersecting) {
-                setTimeout(() => entry.target.classList.add('active'), i * 100);
-                revealObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-    revealElements.forEach(el => revealObserver.observe(el));
-
-    // --- Counter Animation ---
-    const counters = document.querySelectorAll('.stat-number');
-    const counterObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const el = entry.target;
-                const target = parseFloat(el.dataset.count);
-                const isDecimal = el.dataset.decimal === 'true';
-                const duration = 1500;
-                const start = performance.now();
-                function animate(now) {
-                    const progress = Math.min((now - start) / duration, 1);
-                    const eased = 1 - Math.pow(1 - progress, 3);
-                    const current = eased * target;
-                    el.textContent = isDecimal ? current.toFixed(1) : Math.floor(current);
-                    if (progress < 1) requestAnimationFrame(animate);
-                }
-                requestAnimationFrame(animate);
-                counterObserver.unobserve(el);
-            }
-        });
-    }, { threshold: 0.5 });
-    counters.forEach(c => counterObserver.observe(c));
-
-    // --- Smooth Scroll ---
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) target.scrollIntoView({ behavior: 'smooth' });
-        });
-    });
-
-    // --- Tilt Effect on Skill Cards ---
-    document.querySelectorAll('[data-tilt]').forEach(card => {
-        card.addEventListener('mousemove', e => {
+// CURSOR & GLOW
+const cursorGlow = document.createElement('div');
+cursorGlow.id = 'cursor-glow';
+document.body.appendChild(cursorGlow);
+window.addEventListener('mousemove', e => {
+    cursorGlow.style.left = e.clientX + 'px';
+    cursorGlow.style.top = e.clientY + 'px';
+});
+document.querySelectorAll('.glow-container').forEach(container => {
+    container.addEventListener('mousemove', e => {
+        container.querySelectorAll('.glow-card').forEach(card => {
             const rect = card.getBoundingClientRect();
-            const x = (e.clientX - rect.left) / rect.width - 0.5;
-            const y = (e.clientY - rect.top) / rect.height - 0.5;
-            card.style.transform = `perspective(800px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg) translateY(-4px)`;
-        });
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = 'perspective(800px) rotateY(0) rotateX(0) translateY(0)';
+            card.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+            card.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
         });
     });
 });
+
+
