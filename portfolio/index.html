@@ -1,0 +1,333 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Md Minhaz Uddin — Marketing Strategist, Project Manager & Entrepreneurial Operator.">
+    <title>Md Minhaz Uddin — Strategist & Operator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="particles"></canvas>
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-logo" style="font-family: var(--display); font-weight: 800; font-size: 26px; letter-spacing: -1px; text-transform: uppercase; background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">MINHAZ</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#ventures">Ventures</a></li>
+                <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero">
+        <div class="container hero-flex">
+            <div class="hero-text">
+                <p class="hero-eyebrow">Marketing Strategist · Project Manager · Operator</p>
+                <h1 class="hero-name">Md Minhaz Uddin</h1>
+                <p class="hero-tagline">Turning ideas into <span class="accent typed-text" id="typed"></span><span class="cursor">|</span></p>
+                <div class="hero-stats">
+                    <div class="stat"><span class="stat-num" data-count="4">0</span><span class="stat-label">Languages Spoken</span><span class="stat-desc">English (C1/IELTS 7.5), Bangla, Hindi, Urdu</span></div>
+                    <div class="stat"><span class="stat-num" data-count="7.5" data-decimal="true">0</span><span class="stat-label">IELTS Band</span><span class="stat-desc">Advanced Professional Proficiency</span></div>
+                    <div class="stat"><span class="stat-num" data-count="5">0</span><span class="stat-label">Merit Scholarships</span><span class="stat-desc">3 International, 2 National (BD)</span></div>
+                    <div class="stat"><div class="stat-num-wrapper"><span class="stat-num" data-count="4">0</span><span class="stat-plus">+</span></div><span class="stat-label">Active Ventures</span><span class="stat-desc">Including BAJOWS News & DOT ZERO</span></div>
+                </div>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">Let's Connect</a>
+                    <a href="resume.html" target="_blank" class="btn btn-outline">Download Resume</a>
+                </div>
+            </div>
+            <div class="hero-photo-wrapper">
+                <div class="photo-ring"></div>
+                <img src="assets/photo.jpg" alt="Md Minhaz Uddin" class="hero-photo">
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header reveal"><span class="section-tag">01 — About</span><h2 class="section-title">Who I<br><span class="accent">Am.</span></h2></div>
+            <div class="about-grid glow-container">
+                <div class="about-text reveal">
+                    <p class="about-lead">Born on the rivers of Bhola — the largest island in Bangladesh — I grew up where resilience wasn't a lesson, it was the weather.</p>
+                    <p>Today I'm 6,000 km from home, building ventures in Malaysia, winning national competitions, and turning every challenge into a stepping stone. I don't just plan — I execute.</p>
+                </div>
+                <div class="about-cards reveal">
+                    <div class="info-card glow-card" style="--glow-color: #6c5ce7;"><div class="info-card-icon">🎓</div><div class="info-card-content"><h4>Education</h4><p>BBA Marketing — AIU (CGPA: 3.91)</p><span class="info-card-tag">Full Scholarship · Dean's List</span></div></div>
+                    <div class="info-card glow-card" style="--glow-color: #00cec9;"><div class="info-card-icon">🌍</div><div class="info-card-content"><h4>Languages</h4><p>English (C1 · IELTS 7.5), Bangla, Hindi, Urdu</p><span class="info-card-tag">Quadrilingual</span></div></div>
+                    <div class="info-card glow-card" style="--glow-color: #e84393;"><div class="info-card-icon">🏊</div><div class="info-card-content"><h4>Athletics</h4><p>State-level champion swimmer & active cyclist</p><span class="info-card-tag">Island Roots</span></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section id="achievements">
+        <div class="container">
+            <div class="section-header reveal"><span class="section-tag">02 — Achievements</span><h2 class="section-title">Milestones That<br><span class="accent">Define Me.</span></h2></div>
+
+            <p class="section-subtext reveal">Demonstrated excellence in high-stakes environments.</p>
+            <div class="ach-grid glow-container">
+                <!-- ROW 1 -->
+                <div class="ach-card glow-card reveal" style="--glow-color: #00cec9;">
+                    <div class="ach-badge-icon" style="text-shadow: 0 0 15px rgba(255, 215, 0, 0.8);">🥇</div>
+                    <h3 class="ach-card-title">Gold Medal — MABC 2024</h3>
+                    <p>Led a diverse team to victory in the Malaysian Business & Accounting Competition.</p>
+                    <a href="https://youtu.be/0wphJN7NqiQ?si=AYIAAfFEA-NZH9AC" target="_blank" class="ach-link">Watch Project Video</a>
+                    <div class="ach-thumb-wrap"><img src="assets/gold_medal_mabc_2024.jpeg" alt="Gold Medal" onerror="this.style.display='none'"></div>
+                </div>
+                <div class="ach-card glow-card reveal" style="--glow-color: #6c5ce7;">
+                    <div class="ach-badge-icon" style="text-shadow: 0 0 15px rgba(192, 192, 192, 0.8);">🥈</div>
+                    <h3 class="ach-card-title">Silver Medal — 2025</h3>
+                    <p>Business Case Study Idea Competition organized by University Malaysia Kelantan.</p>
+                    <div class="ach-thumb-wrap"><img src="assets/silver_medal_certificate_page-0001.jpg" alt="Silver Medal" onerror="this.style.display='none'"></div>
+                </div>
+                <div class="ach-card glow-card reveal" style="--glow-color: #e84393;">
+                    <div class="ach-badge-icon" style="text-shadow: 0 0 15px rgba(255, 165, 0, 0.8);">🎖️</div>
+                    <h3 class="ach-card-title">ISSB Selection & Finalist</h3>
+                      <p>Successfully advanced through 7 rigorous elimination phases (Medical, Viva, Written, IQ, and PPDT) to reach the final day of the elite 4-day Armed Forces officer selection.</p>
+                </div>
+                <div class="ach-card glow-card reveal" style="--glow-color: #00cec9;">
+                    <div class="ach-badge-icon" style="text-shadow: 0 0 15px rgba(255, 215, 0, 0.8);">🏆</div>
+                    <h3 class="ach-card-title">Dean's List 2025</h3>
+                    <p>Academic excellence recognition at Albukhary International University.</p>
+                    <div class="ach-thumb-wrap"><img src="assets/deans_list_handover.png" alt="Dean's List" onerror="this.style.display='none'"></div>
+                </div>
+                
+                <!-- ROW 2 -->
+                <div class="ach-card glow-card reveal" style="--glow-color: #6c5ce7;">
+                    <div class="ach-badge-icon" style="text-shadow: 0 0 15px rgba(108, 92, 231, 0.8);">🎓</div>
+                    <h3 class="ach-card-title">5 Merit Scholarships</h3>
+                    <p>3 Fully-funded international offers (Malaysia, Indonesia, Kazakhstan) & 2 National Merit Scholarships in Bangladesh.</p>
+                </div>
+                <div class="ach-card glow-card reveal" style="--glow-color: #e84393;">
+                    <div class="ach-badge-icon" style="text-shadow: 0 0 15px rgba(0, 206, 201, 0.8);">💻</div>
+                    <h3 class="ach-card-title">DigComp Level 5</h3>
+                    <p>Advanced professional-level digital proficiency under the European framework.</p>
+                    <div class="ach-thumb-wrap"><img src="assets/digcomp.jpg" alt="DigComp" onerror="this.style.display='none'"></div>
+                </div>
+                <div class="ach-card glow-card reveal" style="--glow-color: #00cec9;">
+                    <div class="ach-badge-icon" style="text-shadow: 0 0 15px rgba(108, 92, 231, 0.8);">🎤</div>
+                    <h3 class="ach-card-title">AIU Debate Club</h3>
+                    <p>Founder & President. Organized university-wide competitions and public speaking workshops.</p>
+                </div>
+                <div class="ach-card glow-card reveal" style="--glow-color: #6c5ce7;">
+                    <div class="ach-badge-icon" style="text-shadow: 0 0 15px rgba(255, 215, 0, 0.8);">💡</div>
+                    <h3 class="ach-card-title">DOT ZERO Club</h3>
+                    <p>Founder & President. Social Business Club fostering sustainable enterprise and leadership.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WORK EXPERIENCE -->
+    <section id="experience">
+        <div class="container">
+            <div class="section-header reveal"><span class="section-tag">03 — Experience</span><h2 class="section-title">Professional<br><span class="accent">Timeline.</span></h2></div>
+            <div class="exp-timeline">
+                <div class="exp-item reveal">
+                    <div class="exp-date">2024 – Present</div>
+                    <div class="exp-content">
+                        <h3>Sales & Operations — Pinball Fashion</h3>
+                        <ul><li>Managing social media-driven sales for premium wallets</li><li>Customer acquisition, engagement, and conversion through Facebook commerce</li><li>Building and maintaining customer relationships through direct messaging</li></ul>
+                    </div>
+                </div>
+                <div class="exp-item reveal">
+                    <div class="exp-date">Jan – Mar 2024</div>
+                    <div class="exp-content">
+                        <h3>Science Teacher — Bhola Memorial Cadet School & College</h3>
+                        <ul><li>Taught Science, Math, English, ICT, and Physics to students ages 5–15</li><li>Developed structured lesson plans and student assessment systems</li><li>Recognized by the Head of School for strong work ethic and dedication</li></ul>
+                    </div>
+                </div>
+                <div class="exp-item reveal">
+                    <div class="exp-date">Dec 2022 – May 2023</div>
+                    <div class="exp-content">
+                        <h3>ICT Instructor — Ucchas ICT Academy</h3>
+                        <ul><li>Prepared 25+ students for the Higher Secondary Examination</li><li>Initiated community engagement programs including interactive public quizzes</li><li>Organized prize events and student activity sessions to boost learning</li></ul>
+                    </div>
+                </div>
+                <div class="exp-item reveal">
+                    <div class="exp-date">Dec 2021 – Feb 2022</div>
+                    <div class="exp-content">
+                        <h3>Physics Instructor — Biggyan Coaching Center</h3>
+                        <ul><li>Guided 15 students through HSC examination preparation</li><li>Simplified complex physics concepts for diverse learning styles</li><li>Adapted teaching methodology to individual student needs</li></ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Early Leadership -->
+            <div class="early-lead reveal glow-container">
+                <h3 class="el-title">Early Leadership & Social Impact</h3>
+                <div class="el-grid">
+                    <div class="el-card glow-card" style="--glow-color: #00cec9;">
+                        <strong>Office Secretary — Al-Hera Shilpi Gosthi</strong>
+                        <span class="el-date">May 2017 – Nov 2018</span>
+                        <p>Managed administrative operations for a cultural organization. Coordinated events, maintained records, and supported community engagement initiatives during formative years.</p>
+                    </div>
+                    <div class="el-card glow-card" style="--glow-color: #6c5ce7;">
+                        <strong>Finance Secretary — Phulkuri Ashar</strong>
+                        <span class="el-date">2020 – 2022</span>
+                        <p>Handled financial operations for a child development organization. Managed budgets, tracked expenses, organized fundraising events, and contributed to programs supporting underprivileged children.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education compact -->
+            <div class="edu-compact reveal">
+                <div class="edu-row"><strong>BBA Marketing</strong> — AIU, Malaysia · 2024–27 · Full Scholarship · CGPA 3.91</div>
+                <div class="edu-row"><strong>HSC Science</strong> — Govt. Lab High School · GPA 5.00/5.00</div>
+                <div class="edu-row"><strong>SSC Science</strong> — Bhola Govt. High School · GPA 5.00/5.00</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+        <div class="container">
+            <div class="section-header reveal"><span class="section-tag">04 — Expertise</span><h2 class="section-title">What I Bring<br><span class="accent">To The Table.</span></h2></div>
+            <div class="skills-tri glow-container reveal">
+                <div class="glow-card skill-block" data-tilt style="--glow-color: #6c5ce7;">
+                    <h3>🗣️ Soft Skills</h3>
+                    <div class="skill-tags"><span class="skill-tag glow-hover">Public Speaking</span><span class="skill-tag glow-hover">Persuasion & Negotiation</span><span class="skill-tag glow-hover">Understanding People</span><span class="skill-tag glow-hover">Active Listening</span><span class="skill-tag glow-hover">Strategic Thinking</span><span class="skill-tag glow-hover">Problem-Solving</span><span class="skill-tag glow-hover">Team Leadership</span><span class="skill-tag glow-hover">Adaptability</span><span class="skill-tag glow-hover">Communication</span></div>
+                </div>
+                <div class="glow-card skill-block" data-tilt style="--glow-color: #00cec9;">
+                    <h3>📊 Hard Skills</h3>
+                    <div class="skill-tags"><span class="skill-tag glow-hover">Data Analysis</span><span class="skill-tag glow-hover">E-Commerce & Sales</span><span class="skill-tag glow-hover">Social Media Management</span><span class="skill-tag glow-hover">Content Strategy</span><span class="skill-tag glow-hover">AI Marketing & Automation</span><span class="skill-tag glow-hover">Business Development</span><span class="skill-tag glow-hover">Project Management</span><span class="skill-tag glow-hover">Event Management</span><span class="skill-tag glow-hover">Video Editing</span></div>
+                </div>
+                <div class="glow-card skill-block" data-tilt style="--glow-color: #e84393;">
+                    <h3>⚡ Tech & Tools</h3>
+                    <div class="skill-tags"><span class="skill-tag glow-hover">Microsoft Office Suite</span><span class="skill-tag glow-hover">Notion</span><span class="skill-tag glow-hover">Google AI Studio</span><span class="skill-tag glow-hover">Antigravity AI</span><span class="skill-tag glow-hover">NotebookLLM</span><span class="skill-tag glow-hover">ICT Fundamentals</span><span class="skill-tag glow-hover">Video Production Tools</span><span class="skill-tag glow-hover">Social Media Platforms</span><span class="skill-tag glow-hover">AI Automation Tools</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VENTURES -->
+    <section id="ventures">
+        <div class="container">
+            <div class="section-header reveal"><span class="section-tag">05 — Ventures</span><h2 class="section-title">Projects I'm<br><span class="accent">Building.</span></h2></div>
+            <div class="venture-featured reveal glow-container">
+                <div class="vf-content glow-card" style="padding: 32px; border: none; background: transparent; --glow-color: #6c5ce7;">
+                    <span class="vf-label">Featured Innovation</span>
+                    <h3>DOT ZERO — Dual-Purpose Paper</h3>
+                    <p>Sustainability-focused paper that serves as both a receipt and a tissue — reducing waste while maintaining practicality.</p>
+                    <div class="vf-links"><a href="https://whoisminhaz.github.io/dotzero/" target="_blank" class="glow-btn" style="--btn-color: #00cec9;">Project Site</a><a href="https://dotzero.whoisminhaz.workers.dev/" target="_blank" class="glow-btn" style="--btn-color: #6c5ce7;">Mirror</a></div>
+                </div>
+                <div class="vf-video"><a href="https://youtu.be/qxXZ83TiXRM" target="_blank" class="yt-preview-link" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: block; background: #000; border-radius: 8px; overflow: hidden; text-decoration: none;">
+    <img src="https://img.youtube.com/vi/qxXZ83TiXRM/hqdefault.jpg" alt="Watch on YouTube" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8; transition: opacity 0.3s;">
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 68px; height: 48px; background: rgba(255,0,0,0.8); border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(255,0,0,0.4); transition: transform 0.2s, background 0.2s;" onmouseover="this.style.background='#ff0000'; this.style.transform='translate(-50%, -50%) scale(1.05)';" onmouseout="this.style.background='rgba(255,0,0,0.8)'; this.style.transform='translate(-50%, -50%) scale(1)';">
+        <div style="width: 0; height: 0; border-style: solid; border-width: 10px 0 10px 16px; border-color: transparent transparent transparent #fff;"></div>
+    </div>
+</a></div>
+            </div>
+            <div class="ventures-grid glow-container">
+                <div class="venture-card glow-card reveal" style="--glow-color: #00cec9;"><div class="venture-card-bg"></div><div class="venture-card-content"><div class="venture-status"><span class="status-dot active"></span>Active</div><h3>BAJOWS News</h3><p class="venture-subtitle">Bangladesh Journalism Wing for Students</p><p>Truth-driven reporting, political awareness, and geopolitical analysis.</p><div class="venture-socials"><a href="https://facebook.com/bajows" target="_blank">Facebook</a><a href="https://instagram.com/bajows.news" target="_blank">Instagram</a><a href="https://youtube.com/@bajows" target="_blank">YouTube</a></div></div></div>
+                <div class="venture-card glow-card reveal" style="--glow-color: #e84393;"><div class="venture-card-bg"></div><div class="venture-card-content"><div class="venture-status"><span class="status-dot building"></span>On Hold</div><h3>DOT ZERO AI</h3><p class="venture-subtitle">AI Education & Productivity</p><p>Simplifying AI tools for practical use — automation and student success.</p><div class="venture-socials"><a href="https://facebook.com/dotzeroai" target="_blank">Facebook</a><a href="https://tiktok.com/@dotzeroai" target="_blank">TikTok</a><a href="https://youtube.com/@dotzeroai" target="_blank">YouTube</a></div></div></div>
+                <div class="venture-card glow-card reveal" style="--glow-color: #6c5ce7;"><div class="venture-card-bg"></div><div class="venture-card-content"><div class="venture-status"><span class="status-dot active"></span>Active</div><h3>Pinball Fashion</h3><p class="venture-subtitle">Social Commerce</p><p>Selling premium wallets through Facebook-based social selling.</p><div class="venture-socials"><a href="https://facebook.com/pinballfashion" target="_blank">Facebook</a></div></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MEDIA -->
+    <section id="media">
+        <div class="container">
+            <div class="section-header reveal"><span class="section-tag">06 — Media</span><h2 class="section-title">Real execution.<br><span class="accent">Not just resumes.</span></h2></div>
+            <div class="media-grid-new glow-container">
+                <div class="video-card glow-card reveal" style="--glow-color: #e84393;">
+                    <a href="https://youtu.be/0wphJN7NqiQ" target="_blank" class="yt-link">
+                        <div class="yt-thumb">
+                            <img src="https://img.youtube.com/vi/0wphJN7NqiQ/hqdefault.jpg" alt="MABC 2024">
+                            <div class="yt-play"><div class="yt-play-tri"></div></div>
+                        </div>
+                        <span class="video-tag">COMPETITION PITCH</span>
+                        <h4>MABC 2024 — Gold Medal</h4>
+                    </a>
+                </div>
+                <div class="video-card glow-card reveal" style="--glow-color: #00cec9;">
+                    <a href="https://youtu.be/qxXZ83TiXRM" target="_blank" class="yt-link">
+                        <div class="yt-thumb">
+                            <img src="https://img.youtube.com/vi/qxXZ83TiXRM/hqdefault.jpg" alt="DOT ZERO">
+                            <div class="yt-play"><div class="yt-play-tri"></div></div>
+                        </div>
+                        <span class="video-tag">VENTURE PITCH</span>
+                        <h4>DOT ZERO Paper Project</h4>
+                    </a>
+                </div>
+                <div class="video-card glow-card reveal" style="--glow-color: #6c5ce7;">
+                    <a href="https://youtu.be/BK54wKCeUOE" target="_blank" class="yt-link">
+                        <div class="yt-thumb">
+                            <img src="https://img.youtube.com/vi/BK54wKCeUOE/hqdefault.jpg" alt="Teaching">
+                            <div class="yt-play"><div class="yt-play-tri"></div></div>
+                        </div>
+                        <span class="video-tag">COMMUNICATION</span>
+                        <h4>Teaching & Engagement</h4>
+                    </a>
+                </div>
+            </div>
+            <div class="media-photo-row reveal"><img src="assets/debate_group_photo.jpg.jpeg" alt="Debate Club" class="media-photo" onerror="this.parentElement.style.display='none'"></div>
+        </div>
+    </section>
+
+    <!-- REFERENCES -->
+    <section id="references">
+        <div class="container">
+            <div class="section-header reveal"><span class="section-tag">07 — References</span><h2 class="section-title">Professional<br><span class="accent">References.</span></h2></div>
+            <div class="ref-grid glow-container">
+                <div class="ref-card glow-card reveal" style="--glow-color: #00cec9;">
+                    <div class="ref-author" style="margin-bottom:0">
+                        <div class="ref-info"><strong style="font-size:22px; color:#fff; display:block; margin-bottom:4px;">Dr. Nor Azilah Husin</strong><span style="font-size:16px; color:#00cec9; display:block; font-weight:600; margin-bottom:2px;">Professor</span><span style="font-size:14px; color:#6c5ce7; display:block; margin-bottom:16px;">Albukhary International University</span><span style="display:block; margin-bottom:4px; color:var(--text2); font-size:13px;">azilah.husin@aiu.edu.my</span><span style="display:block; color:var(--text2); font-size:13px;">+60 19-987 7271</span></div>
+                    </div>
+                </div>
+                <div class="ref-card glow-card reveal" style="--glow-color: #6c5ce7;">
+                    <div class="ref-author" style="margin-bottom:0">
+                        <div class="ref-info"><strong style="font-size:22px; color:#fff; display:block; margin-bottom:4px;">Md. Ashraf</strong><span style="font-size:16px; color:#00cec9; display:block; font-weight:600; margin-bottom:2px;">Research Assistant</span><span style="font-size:14px; color:#6c5ce7; display:block; margin-bottom:16px;">Yale University</span><span style="display:block; margin-bottom:4px; color:var(--text2); font-size:13px;">mdashraf7@gmail.com</span><span style="display:block; color:var(--text2); font-size:13px;">+1 (203) 747-9370</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="container">
+            <div class="contact-wrapper reveal glow-container">
+                <div class="glow-card" style="padding: 48px; --glow-color: #e84393;">
+                    <div class="section-header"><span class="section-tag">08 — Contact</span><h2 class="section-title">Let's Build<br><span class="accent">Something Together.</span></h2></div>
+                    <p class="contact-desc">Open to collaborations, consulting, sales partnerships, and business opportunities.</p>
+                    <div class="contact-actions-top"><a href="resume.html" target="_blank" class="glow-btn" style="--btn-color: #6c5ce7;">View My Resume</a></div>
+                    <div class="contact-links glow-container">
+                        <a href="mailto:write.minhaz@gmail.com" class="contact-card glow-card" style="--glow-color: #e84393; background: rgba(255,255,255,0.02); border-color: rgba(232,67,147,0.5); box-shadow: 0 0 15px rgba(232,67,147,0.4), 0 0 5px rgba(232,67,147,0.6); transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'"><div class="contact-card-icon" style="color: #e84393;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></div><div><h4 style="color: #e84393;">Email</h4><span>write.minhaz@gmail.com</span></div></a>
+                        <a href="https://wa.me/601124248680" target="_blank" class="contact-card glow-card" style="--glow-color: #2ecc71; background: rgba(255,255,255,0.02); border-color: rgba(46,204,113,0.5); box-shadow: 0 0 15px rgba(46,204,113,0.4), 0 0 5px rgba(46,204,113,0.6); transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'"><div class="contact-card-icon" style="color: #2ecc71;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div><div><h4 style="color: #2ecc71;">WhatsApp</h4><span>+60 11-2424-8680</span></div></a>
+                        <a href="https://linkedin.com/in/whoisminhaz" target="_blank" class="contact-card glow-card" style="--glow-color: #0984e3; background: rgba(255,255,255,0.02); border-color: rgba(9,132,227,0.5); box-shadow: 0 0 15px rgba(9,132,227,0.4), 0 0 5px rgba(9,132,227,0.6); transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'"><div class="contact-card-icon" style="color: #0984e3;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></div><div><h4 style="color: #0984e3;">LinkedIn</h4><span>linkedin.com/in/whoisminhaz</span></div></a>
+                        <a href="https://facebook.com/facebook.minhaz" target="_blank" class="contact-card glow-card" style="--glow-color: #74b9ff; background: rgba(255,255,255,0.02); border-color: rgba(116,185,255,0.5); box-shadow: 0 0 15px rgba(116,185,255,0.4), 0 0 5px rgba(116,185,255,0.6); transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'"><div class="contact-card-icon" style="color: #74b9ff;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></div><div><h4 style="color: #74b9ff;">Facebook</h4><span>facebook.com/facebook.minhaz</span></div></a>
+                        <a href="https://instagram.com/who.isminhaz" target="_blank" class="contact-card glow-card" style="--glow-color: #fd79a8; background: rgba(255,255,255,0.02); border-color: rgba(253,121,168,0.5); box-shadow: 0 0 15px rgba(253,121,168,0.4), 0 0 5px rgba(253,121,168,0.6); transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'"><div class="contact-card-icon" style="color: #fd79a8;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></div><div><h4 style="color: #fd79a8;">Instagram</h4><span>instagram.com/who.isminhaz</span></div></a>
+                    </div>
+                    <div class="portfolio-links"><p>Also available at:</p><div class="pf-row"><a href="https://whoisminhaz.vercel.app/" target="_blank">Vercel</a><a href="https://whoisminhaz.github.io/portfolio/" target="_blank">GitHub</a><a href="https://portfolio.whoisminhaz.workers.dev/" target="_blank">Cloudflare</a></div></div>
+                    <div class="contact-footer"><p>Based in <strong>Kedah, Malaysia</strong> · Originally from <strong>Bhola, Bangladesh</strong></p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer><div class="container"><div class="footer-content"><p>&copy; 2025 Md Minhaz Uddin. All rights reserved.</p></div></div></footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
