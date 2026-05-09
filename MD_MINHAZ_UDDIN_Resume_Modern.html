@@ -51,42 +51,7 @@
         @media print {
             body { background: #fff; padding: 0; }
             .resume { box-shadow: none; border: none; }
-            .print-btn { display: none !important; }
             @page { size: A4; margin: 0; }
-        }
-
-        /* Print Button */
-        .print-btn {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: var(--navy);
-            color: #fff;
-            border: none;
-            padding: 14px 28px;
-            border-radius: 50px;
-            font-size: 14px;
-            font-weight: 700;
-            font-family: 'Inter', sans-serif;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            transition: all 0.3s ease;
-            z-index: 1000;
-        }
-
-        .print-btn:hover {
-            background: var(--gold);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(180, 144, 93, 0.4);
-        }
-
-        .print-btn svg {
-            width: 16px;
-            height: 16px;
-            fill: currentColor;
         }
 
         /* Layout */
@@ -380,12 +345,6 @@
     </style>
 </head>
 <body>
-    <!-- Floating Download Button -->
-    <button onclick="window.print()" class="print-btn">
-        <svg viewBox="0 0 512 512"><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 29.3C388 17.3 371.7 10.7 354.7 10.7H128zM512 272c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v144c0 35.3 28.7 64 64 64h64v-48H64c-8.8 0-16-7.2-16-16V272c0-8.8 7.2-16 16-16h384c8.8 0 16 7.2 16 16v144c0 8.8-7.2 16-16 16h-64v48h64c35.3 0 64-28.7 64-64V272zM128 384v128h256V384H128z"/></svg>
-        Download as PDF
-    </button>
-
     <div class="resume">
         <!-- Left Column -->
         <div class="col-left">

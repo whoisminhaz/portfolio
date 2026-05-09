@@ -1,4 +1,4 @@
-﻿/* MD MINHAZ UDDIN — Purple/Teal Animated Theme */
+/* MD MINHAZ UDDIN — Purple/Teal Animated Theme */
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
   --bg:#06060e;--bg2:#0a0a14;--card:rgba(255,255,255,0.03);--card-h:rgba(255,255,255,0.06);
@@ -63,9 +63,9 @@ section{position:relative;z-index:1;padding:80px 0}
 .section-title{font-family:var(--display);font-size:clamp(28px,3.5vw,42px);font-weight:700;line-height:1.2}
 
 /* ABOUT */
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
-.about-lead{font-size:17px;color:var(--text);font-weight:500;line-height:1.7;margin-bottom:12px}
-.about-text p{font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:16px}
+.about-grid{display:flex;flex-direction:column;align-items:center;text-align:center;max-width:900px;margin:0 auto}
+.about-lead{font-size:24px;color:var(--text);font-weight:500;line-height:1.7;margin-bottom:16px}
+.about-text p{font-size:18px;color:var(--text2);line-height:1.8;margin-bottom:0}
 .about-cards{display:flex;flex-direction:column;gap:14px}
 .info-card{display:flex;align-items:center;gap:16px;padding:18px;border-radius:var(--r);background:var(--card);border:1px solid var(--border);transition:var(--t)}
 .info-card:hover{background:var(--card-h);transform:translateX(4px)}
@@ -111,15 +111,13 @@ section{position:relative;z-index:1;padding:80px 0}
 .ach-card:hover .ach-thumb-wrap img{transform:scale(1.05)}
 
 /* WORK EXPERIENCE */
-.exp-timeline{position:relative;padding-left:40px;margin-bottom:48px}
-.exp-timeline::before{content:'';position:absolute;left:8px;top:8px;bottom:8px;width:2px;background:linear-gradient(to bottom,var(--accent),var(--accent2),var(--border))}
-.exp-item{position:relative;margin-bottom:28px;padding-left:24px}
-.exp-item::before{content:'';position:absolute;left:-40px;top:8px;width:17px;height:17px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
-.exp-date{font-size:12px;font-weight:600;color:var(--accent2);letter-spacing:1px;margin-bottom:6px}
-.exp-content h3{font-size:15px;font-weight:700;margin-bottom:8px}
-.exp-content ul{list-style:none;padding:0}
-.exp-content li{font-size:12px;color:var(--text2);line-height:1.6;padding:3px 0;padding-left:14px;position:relative}
-.exp-content li::before{content:'→';position:absolute;left:0;color:var(--accent)}
+.exp-grid{display:grid;grid-template-columns:repeat(2, 1fr);gap:24px;margin-bottom:48px}
+.exp-card{padding:32px;border-radius:var(--r);background:var(--card);border:1px solid var(--border);display:flex;flex-direction:column}
+.exp-date{font-size:12px;font-weight:700;color:var(--accent2);letter-spacing:1px;margin-bottom:12px;display:inline-block;padding:4px 12px;background:rgba(0,206,201,0.1);border-radius:100px;align-self:flex-start}
+.exp-card h3{font-size:18px;font-weight:700;margin-bottom:16px;line-height:1.4;color:#fff}
+.exp-card ul{list-style:none;padding:0;margin:0}
+.exp-card li{font-size:13px;color:var(--text2);line-height:1.6;margin-bottom:10px;padding-left:18px;position:relative}
+.exp-card li::before{content:'→';position:absolute;left:0;color:var(--accent);font-weight:700}
 
 /* Early Leadership */
 .early-lead{padding-top:32px;border-top:1px solid var(--border);margin-bottom:32px}
@@ -193,20 +191,17 @@ section{position:relative;z-index:1;padding:80px 0}
 .media-photo{max-height:360px;border-radius:var(--r);object-fit:cover;border:1px solid var(--border)}
 
 /* CONTACT */
-.contact-wrapper{padding:48px;border-radius:var(--r);background:var(--card);border:1px solid var(--border)}
-.contact-desc{font-size:15px;color:var(--text2);margin-bottom:28px}
-.contact-actions-top{margin-bottom:28px}
-.contact-links{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
-.contact-card{display:flex;align-items:center;gap:14px;padding:16px;border-radius:12px;background:rgba(255,255,255,0.02);border:1px solid var(--border);transition:var(--t)}
-.contact-card:hover{background:var(--card-h);transform:translateY(-2px);border-color:rgba(108,92,231,0.2)}
-.contact-card-icon{font-size:22px}
-.contact-card h4{font-size:13px;font-weight:700;margin-bottom:2px}
-.contact-card span{font-size:12px;color:var(--text2)}
-.portfolio-links{padding-top:20px;border-top:1px solid var(--border);margin-bottom:20px}
-.portfolio-links p{font-size:12px;color:var(--muted);margin-bottom:8px}
-.pf-row{display:flex;gap:10px}
-.pf-row a{font-size:12px;font-weight:600;color:var(--text2);padding:6px 14px;border-radius:100px;background:rgba(255,255,255,0.03);border:1px solid var(--border);transition:var(--t)}
-.pf-row a:hover{color:var(--accent);border-color:rgba(108,92,231,0.3)}
+.contact-wrapper{display:flex;flex-direction:column;gap:32px;margin:0 auto;max-width:800px;text-align:center}
+.contact-desc{font-size:18px;color:var(--text2);margin-bottom:32px}
+.contact-actions-top{margin-bottom:32px;display:flex;justify-content:center}
+.contact-links{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-bottom:24px}
+.contact-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 24px;border-radius:100px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);color:var(--text);font-size:14px;font-weight:600;transition:all 0.3s ease;text-decoration:none}
+.contact-btn:hover{background:rgba(0,206,201,0.1);border-color:var(--accent2);color:#fff;transform:translateY(-2px);box-shadow:0 6px 15px rgba(0,206,201,0.2)}
+.contact-btn svg{color:var(--accent2);transition:all 0.3s ease}
+.contact-btn:hover svg{color:#fff}
+.portfolio-links{padding:24px;background:var(--bg);border-radius:var(--r);margin-bottom:24px;border:1px solid var(--border)}
+.portfolio-links p{font-size:14px;color:var(--text2);margin-bottom:12px}
+.pf-row{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
 .contact-footer{font-size:13px;color:var(--muted)}
 
 /* FOOTER */
@@ -237,9 +232,9 @@ footer p{font-size:12px;color:var(--muted)}
   
   
   .hero-photo-wrapper{width:220px;height:280px}
-  .about-grid,.venture-featured{grid-template-columns:1fr}
+  .venture-featured{grid-template-columns:1fr}
   .ventures-grid,.skills-tri,.media-grid-new{grid-template-columns:1fr}
-  .el-grid{grid-template-columns:1fr}
+  .el-grid,.exp-grid{grid-template-columns:1fr}
   
 }
 @media(max-width:640px){
